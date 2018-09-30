@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">NewsApp</string>
+    <string name="from_hint">from</string>
+    <string name="title_hint">title</string>
+    <string name="no_internet">No Internet Connection Detected</string>
+    <string name="image_content_description">image</string>
+    <string name="date_hint">date_hint</string>
+</resources>
