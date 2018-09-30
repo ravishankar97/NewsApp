@@ -19,7 +19,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<NewsData>> {
-    public static final String STRING_URL = "https://content.guardianapis.com/search?q=daily%20news&api-key=ef2de363-f502-45c0-9260-6796c6661d54";
+    public static final String STRING_URL = "https://content.guardianapis.com/search?q=dailynews&api-key=ef2de363-f502-45c0-9260-6796c6661d54";
     NewsAdapter newsAdapter;
     TextView EmptyStateView;
 
