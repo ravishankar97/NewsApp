@@ -1,31 +1,31 @@
 package com.example.ravishankar.newsapp;
 
 public class NewsData {
-    private String sourceName;
     private String headLine;
     private String webURL;
     private String dateOfPublication;
+    private String authorName;
 
-    NewsData(String sourceName, String headLine, String webURL, String dateOfPublication) {
-        this.sourceName = sourceName;
+    NewsData(String headLine, String webURL, String dateOfPublication, String authorName) {
         this.headLine = headLine;
         this.webURL = webURL;
         this.dateOfPublication = dateOfPublication;
-    }
-
-    public String getSourceName() {
-        return sourceName;
+        this.authorName = authorName;
     }
 
     String getHeadLine() {
         return headLine;
     }
 
-    public String getWebURL() {
+    String getWebURL() {
         return webURL;
     }
 
-    public String getDateOfPublication() {
+    String getDateOfPublication() {
         return dateOfPublication;
+    }
+
+    String getAuthorName() {
+        return authorName;
     }
 }

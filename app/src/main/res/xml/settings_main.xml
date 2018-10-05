@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/settings_title">
+    <ListPreference
+        android:defaultValue="@string/default_section_to_view"
+        android:entries="@array/labels_present"
+        android:entryValues="@array/values_for_labels"
+        android:key="@string/sections_key"
+        android:title="@string/sections" />
+    <EditTextPreference
+        android:defaultValue="@string/page_size_default_value"
+        android:inputType="numberDecimal"
+        android:key="@string/page_size_key"
+        android:selectAllOnFocus="true"
+        android:title="@string/title_page_size" />
+</PreferenceScreen>

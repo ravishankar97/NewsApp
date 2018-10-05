@@ -4,7 +4,6 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +18,6 @@ public class NewsAdapter extends ArrayAdapter<NewsData> {
         super(context, 0, objects);
     }
 
-
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -27,16 +25,22 @@ public class NewsAdapter extends ArrayAdapter<NewsData> {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         NewsData newsData = getItem(position);
 
-        TextView sourceName = convertView.findViewById(R.id.sourceName);
         TextView headLine = convertView.findViewById(R.id.headLine);
         TextView dateOfPublication = convertView.findViewById(R.id.date);
+        TextView authorName = convertView.findViewById(R.id.author);
         assert newsData != null;
 
-        sourceName.setText(Html.fromHtml("<u>" + newsData.getSourceName() + "</u"));
-        sourceName.setTextColor(getColor(position));
         headLine.setText(newsData.getHeadLine());
-        dateOfPublication.setText(newsData.getDateOfPublication());
+        headLine.setTextColor(getColor(position));
+        authorName.setText(newsData.getAuthorName());
+        String dateFormatted = changeDate(newsData.getDateOfPublication());
+        dateOfPublication.setText(dateFormatted);
         return convertView;
+    }
+
+    private String changeDate(String dateOfPublication) {
+        String dateParts[] = dateOfPublication.split("-");
+        return (dateParts[2] + "-" + dateParts[1] + "-" + dateParts[0]);
     }
 
     private int getColor(int position) {

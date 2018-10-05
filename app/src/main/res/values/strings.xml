@@ -5,4 +5,16 @@
     <string name="no_internet">No Internet Connection Detected</string>
     <string name="image_content_description">image</string>
     <string name="date_hint">date_hint</string>
+    <string name="settings_menu_item">Settings</string>
+    <string name="settings_title">Earthquake Settings</string>
+    <string name="sections_key">section</string>
+    <string name="sections">Sections</string>
+    <string name="default_section_to_view">technology</string>
+    <string name="page_size_default_value">1</string>
+    <string name="page_size_key">page_size</string>
+    <string name="title_page_size">Page Size</string>
+    <string name="author_hint">author_hint</string>
+    <string name="API_KEY">ef2de363-f502-45c0-9260-6796c6661d54</string>
+    <string name="contributor">contributor</string>
+    <string name="heading_hint">heading</string>
 </resources>

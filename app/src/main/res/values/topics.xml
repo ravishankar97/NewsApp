@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="labels_present">
+        <item>Football</item>
+        <item>Cricket</item>
+        <item>Technology</item>
+        <item>Cinema</item>
+        <item>Weather</item>
+    </string-array>
+
+    <string-array name="values_for_labels">
+        <item>football</item>
+        <item>cricket</item>
+        <item>technology</item>
+        <item>cinema</item>
+        <item>weather</item>
+    </string-array>
+</resources>
