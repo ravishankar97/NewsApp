@@ -6,11 +6,11 @@ import android.content.Context;
 import java.util.List;
 
 public class NewsLoader extends AsyncTaskLoader<List<NewsData>> {
-    private String mURLToLoad;
+    private String URLToLoad;
 
     NewsLoader(Context context, String urlToLoad) {
         super(context);
-        mURLToLoad = urlToLoad;
+        URLToLoad = urlToLoad;
     }
 
     @Override
@@ -20,9 +20,9 @@ public class NewsLoader extends AsyncTaskLoader<List<NewsData>> {
 
     @Override
     public List<NewsData> loadInBackground() {
-        if (mURLToLoad == null)
+        if (URLToLoad == null)
             return null;
         else
-            return QueryUtils.fetchData(mURLToLoad);
+            return QueryUtils.fetchData(URLToLoad);
     }
 }

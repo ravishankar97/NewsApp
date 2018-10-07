@@ -24,7 +24,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/heading"
-        tools:context=".MainActivity"></ListView>
+        tools:context=".MainActivity">
+
+    </ListView>
 
     <TextView
         android:id="@+id/empty_view"

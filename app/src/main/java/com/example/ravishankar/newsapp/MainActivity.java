@@ -1,12 +1,9 @@
 package com.example.ravishankar.newsapp;
 
 import android.app.LoaderManager;
-import android.content.Context;
 import android.content.Intent;
 import android.content.Loader;
 import android.content.SharedPreferences;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
@@ -66,11 +63,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 return true;
             }
         });
-
-        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        assert connectivityManager != null;
-        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
-        if (networkInfo != null && networkInfo.isConnected()) {
+        if (NetworkUtils.CheckNetworkConnectivityState(this)) {
             getLoaderManager().initLoader(0, null, this);
         } else {
             View LoadingIndicator = findViewById(R.id.progress_bar);

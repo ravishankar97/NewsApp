@@ -18,10 +18,13 @@ import java.nio.charset.Charset;
 import java.util.LinkedList;
 import java.util.List;
 
-public final class QueryUtils {
+final class QueryUtils {
+    QueryUtils() {
+
+    }
     private static final String LOG_TAG = QueryUtils.class.getSimpleName();
 
-    public static List<NewsData> fetchData(String urlString) {
+    static List<NewsData> fetchData(String urlString) {
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
